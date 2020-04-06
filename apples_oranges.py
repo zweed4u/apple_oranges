@@ -1,7 +1,10 @@
 #!/usr/bin/python3
+from typing import List
 
 # https://www.hackerrank.com/challenges/apple-and-orange/problem
-def countApplesAndOranges(s, t, a, b, apples, oranges):
+def countApplesAndOranges(
+    s: int, t: int, a: int, b: int, apples: List[int], oranges: List[int]
+) -> List[int]:
     """
     Determine how many apples and oranges will fall on a house roof
     given various distances
@@ -24,8 +27,7 @@ def countApplesAndOranges(s, t, a, b, apples, oranges):
         d_orange = b + orange  # negative values will be given for left
         if s <= d_orange and d_orange <= t:
             oranges_on_roof += 1
-    print(apples_on_roof)
-    print(oranges_on_roof)
+    print(f"Apples: {apples_on_roof} Oranges: {oranges_on_roof}")
     return [apples_on_roof, oranges_on_roof]
 
 
